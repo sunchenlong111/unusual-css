@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>多行文字居中</title>
+  <style>
+    span {
+      display: inline-block;
+      border: 1px solid green;
+      width: 5em;
+      text-align: justify;
+      /*现在太高了，所以要去掉这个蓝线，所以要先定行高*/
+      line-height: 20px;
+      height: 20px;
+      overflow: hidden;
+    }
+
+    span::after {
+      content: '';
+      display: inline-block;
+      border: 1px solid blue;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>姓名</span><br>
+    <span>联系方式</span>
+  </div>
+
+</body>
+
+</html>
